@@ -35,7 +35,7 @@ svg{
     transition: 1s;
     height: 100%;
 }
-
+/* best prices  */
 
 .magna {
     background-color: #00862d;
@@ -55,6 +55,10 @@ svg{
     border-radius: 0px;
 }
 
+/* best prices  */
+
+
+/* Css de scroll   */
 .star{
     color: yellow;
 }
@@ -70,3 +74,4 @@ body::-webkit-scrollbar-thumb {
   background-color: rgb(138, 30, 30);
   outline: 1px solid rgb(54, 83, 111);
 }
+/* Css de scroll   */
