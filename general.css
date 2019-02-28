@@ -1,0 +1,60 @@
+body {
+    overflow-x:hidden;
+    font-family: 'Quicksand', sans-serif;
+}
+
+#mainBlock{
+    margin-top: 66px;
+}
+
+svg{
+    background-color: white;
+}
+
+#graficas {
+    height: 15vh;
+    width: 95%;
+}
+
+#contenedorMapa {
+    height: 80vh;
+    border: 0 solid black;
+    padding: 0px;
+}
+
+#mapa {
+    height: 100%;
+    width: 100%;
+}
+
+#carta {
+    overflow: auto;
+    z-index: 3;
+    position: absolute;
+    margin-left: -500px;
+    transition: 1s;
+    height: 100%;
+}
+
+
+.magna {
+    background-color: #00862d;
+    color: white;
+    border-radius: 0px;
+}
+
+.premium {
+    background-color: #e6182f;
+    color: white;
+    border-radius: 0px;
+}
+
+.diesel {
+    background-color: black;
+    color: white;
+    border-radius: 0px;
+}
+
+.star{
+    color: yellow;
+}

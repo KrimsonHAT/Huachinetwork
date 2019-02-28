@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Gansolina</title>
+    <!--General-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <!--BootStrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--Css-->
+    <link href="general.css" rel="stylesheet" type="text/css">
+    <!--Mapa-->
+    <link href="1.-Fabian/mapa.css" rel="stylesheet" type="text/css">
+    <link href='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
+    <!--Iconos-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+          integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <!--Animate-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <!--Graphs-->
+    <link rel="stylesheet" href="./2.-Jose/style.css">
+    <link rel="stylesheet" href="./2.-Jose/graphStyles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.6.12/c3.min.css">
+</head>
+<body>
+
+<!--Navbar-->
+<nav class="navbar navbar-expand-md fixed-top navbar-light bg-light">
+    <a class="navbar-brand" href="index.html"><img src="1.-Fabian/ganzo.png" height="40px"></a>
+    <h3>Gansolina</h3>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="#inicio">Acerca de Nosotros</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#servicios">Inicio de Sesión</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+<!--
+Bloque de estadisticas
+<div id="graficas">
+
+    <div class="row">
+        <div class="col-6" id="chartBestPrices"></div>
+        <div class="col-6" id="chartAvgPrices"></div>
+    </div>
+
+</div>
+-->
+
+<!--Bloque principal-->
+<div id="mainBlock" class="container-fluid">
+    <div class="row">
+        <!--Contenedor de mapa-->
+        <div id="contenedorMapa" class="col-md-9 d-flex">
+            <!--Mapa-->
+            <div id="map"></div>
+            <!--Carta de informacion-->
+            <div id="carta" class="card" style="width: 20rem;">
+                <div class="card-body p-3">
+                    <h5 class="card-title">Nombre S.A. de C.V.</h5>
+                    <div class="caed-subtitle mb-2">
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star-half-alt star"></i>
+                        <i class="far fa-star star"></i>
+                    </div>
+                    <!--Cartas de precio-->
+                    <div class="row">
+                        <!--Magna-->
+                        <div id="magna" class="card col-sm-4 p-0 text-center magna">
+                            <div class="card-body p-1">
+                                <h6 class="card-title">Magna</h6>
+                                <p class="card-text">$20.45</p>
+                            </div>
+                        </div>
+                        <!--Premium-->
+                        <div id="premium" class="card col-sm-4 p-0 text-center premium">
+                            <div class="card-body p-1">
+                                <h6 class="card-title">Premium</h6>
+                                <p class="card-text">22.45</p>
+                            </div>
+                        </div>
+                        <!--Diesel-->
+                        <div id="diesel" class="card col-sm-4 p-0 text-center diesel">
+                            <div class="card-body p-1">
+                                <h6 class="card-title">Diesel</h6>
+                                <p class="card-text">$25.45</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Comentarios-->
+                    <ul class="list-group my-3">
+                        <li class="list-group-item">Cras justo odio</li>
+                        <li class="list-group-item">Dapibus ac facilisis in</li>
+                        <li class="list-group-item">Morbi leo risus</li>
+                        <li class="list-group-item">Porta ac consectetur ac</li>
+                        <li class="list-group-item">Vestibulum at eros</li>
+                    </ul>
+                    <div class="d-flex justify-content-center">
+                        <button type="button" class="btn btn-primary">Agregar comentario</button>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+            <!--Boton de desplegar-->
+        </div>
+        <!--Contenedor de la derecha-->
+        <div class="col-md-3 p-0" id="contenedorInfo">
+            <div id="contenedorDerecha" class="card">
+                <div class="card-body p-3">
+                    <!-- BestPrices-->
+                    <table id="bestPrices" class="table text-center">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th colspan="3"><i class="fas fa-fire-alt"></i> Mejores precios <i class="fas fa-fire-alt"></i></th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <th scope="col">Tipo</th>
+                        <th scope="col">Precio</th>
+                        <th scope="col">Calle</th>
+                    </tr>
+                    </table>
+                   
+                    <h5 class="card-title mt-4">Favoritos</h5>
+                    <ul class="list-group my-3">
+                        <li class="list-group-item">Gas Americas</li>
+                        <li class="list-group-item">Gas Peroferico</li>
+                        <li class="list-group-item">Gas López Mateos</li>
+                    </ul>                   
+                   
+                    <div class="d-flex justify-content-center">
+                        <button type="button" class="btn btn-warning">Agregar Favorito</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+    <!--Bloque de estadisticas-->
+    <div id="graficas">
+
+        <div class="row">
+            <div class="col-6" id="chartBestPrices"></div>
+            <div class="col-6" id="chartAvgPrices"></div>
+        </div>
+
+    </div>
+</div>
+
+
+<!--Jquery-->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<!--Js general-->
+<script src="indexjs.js" type="application/javascript"></script>
+<!--Js mapa-->
+<script src='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+<script src="1.-Fabian/mapa.js" type="text/javascript"></script>
+<!--boostrap-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+<!--Graphs-->
+<script src="./2.-Jose/bestPrices.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.9.1/d3.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.6.12/c3.min.js"></script>
+<script src="./2.-Jose/lineGraph.js"></script>
+
+<script src="./2.-Jose/bestPricesGraph.js"></script>
+<script src="./2.-Jose/avgPricesGraph.js"></script>
+
+</body>
+</html>
