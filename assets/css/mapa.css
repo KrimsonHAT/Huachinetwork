@@ -3,7 +3,7 @@
     width: 100%;
 }
 .marker{
-    background-image: url("ganzo.png");
+    background-image: url("../images/ganzo.png");
     background-size: cover;
     width: 50px;
     height: 50px;
@@ -13,7 +13,7 @@
 
 
 .mapboxgl-user-location-dot{
-    background-image: url("ganzo.png") !important;
+    background-image: url("../images/ganzo.png") !important;
     background-size: cover !important;;
     width: 30px !important;;
     height: 30px !important;;
@@ -22,7 +22,7 @@
 }
 
 .mapboxgl-user-location-dot::after{
-    background-image: url("ganzo.png") !important;
+    background-image: url("../images/ganzo.png") !important;
     background-size: cover;
     width: 30px !important;
     height: 30px !important;
