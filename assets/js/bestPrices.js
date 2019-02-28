@@ -22,7 +22,7 @@ function append_json(data) {
     data.forEach(function (object) {
         var x,y;
         x = object.location.x;
-        y = object.location.y;
+        y = object.location.y;  
         var tr = document.createElement('tr');
 //        onclick="goToGas('+x+','+y+')"
         tr.innerHTML = '<td onclick="goToGas('+x+','+y+')" scope="row" class="gas ' + object.type + '">' + object.type + '</td>' +
@@ -32,7 +32,7 @@ function append_json(data) {
     });
 }
 
-function goToGas(x,y){
+  function goToGas(x,y){
     console.log("x: " + x + "y: "+y);
     
     let map = new mapboxgl.Map({
@@ -40,10 +40,10 @@ function goToGas(x,y){
     style: 'mapbox://styles/mapbox/streets-v11',
     center: [x, y],
     zoom: 12
-
+ 
 });
     
-    let marker = new mapboxgl.Marker(element).setLngLat({
+     let marker = new mapboxgl.Marker(element).setLngLat({
     lng: x,
     lat: y
     })

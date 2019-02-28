@@ -10,7 +10,7 @@ var chart = c3.generate({
             tick: {
                 format: '%m-%d %H:00'
             }
-        }
+         }
     },
     data: {
         x: 'update_time',

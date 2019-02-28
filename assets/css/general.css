@@ -43,7 +43,7 @@ svg{
     border-radius: 0px;
 }
 
-.premium {
+ .premium {
     background-color: #e6182f;
     color: white;
     border-radius: 0px;
@@ -57,4 +57,16 @@ svg{
 
 .star{
     color: yellow;
+}
+body::-webkit-scrollbar {
+    width: 13px;
+}
+ 
+body::-webkit-scrollbar-track {
+    -webkit-box-reflect: inset 0 0 6px rgba(0,0,0,0.3);
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(138, 30, 30);
+  outline: 1px solid rgb(54, 83, 111);
 }
