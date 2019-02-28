@@ -1,31 +1,4 @@
-<<<<<<< HEAD
-[{
-        "type": "premium",
-        "price": 254,
-        "location": {
-            "address_street": "Av. Chapalita No. 1010, Chapalita, 45050 ",
-            "x": -103.348012,
-            "y": 20.659101
-        }
-}, {
-        "type": "regular",
-        "price": 1785,
-        "location": {
-            "address_street": "Av. Ignacio L. Vallarta N 4961, Prados Vallarta",
-            "x": -103.4275867,
-             "y": 20.6785471
-        }
-}, {
-        "type": "diesel",
-        "price": 254,
-        "location": {
-            "address_street": "Los alamitos KM 83",
-            "x": -110.347013,
-            "y":  50.684649
-        }
-}
-]
-=======
+
 [{
         "type": "premium",
         "price": 254,
@@ -52,4 +25,4 @@
         }
 }
 ]
->>>>>>> 7f268b33eae41f9a1838c1cb565798088b5fa477
+
