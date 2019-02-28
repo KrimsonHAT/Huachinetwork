@@ -22,10 +22,11 @@ function append_json(data) {
     data.forEach(function (object) {
         var x,y;
         x = object.location.x;
-        y = object.location.y;  
+        y = object.location.y;
         var tr = document.createElement('tr');
+        tr.className = "fakeBtn align-middle";
 //        onclick="goToGas('+x+','+y+')"
-        tr.innerHTML = '<td onclick="goToGas('+x+','+y+')" scope="row" class="gas ' + object.type + '">' + object.type + '</td>' +
+        tr.innerHTML = '<td onclick="goToGas('+x+','+y+')" scope="row" class="align-middle gas ' + object.type + '">' + object.type + '</td>' +
             '<td onclick="goToGas('+x+','+y+')" scope="row" > $' + object.price + '</td>' +
             '<td onclick="goToGas('+x+','+y+')" scope="row">' + object.location.address_street + '</td>';
         table.appendChild(tr);
@@ -41,6 +42,6 @@ function goToGas(x,y){
     })
     .addTo(map);
     
-     map.flyTo({center: [x, y], zoom: 15});
+    map.flyTo({center: [x, y], zoom: 15});
     
 }

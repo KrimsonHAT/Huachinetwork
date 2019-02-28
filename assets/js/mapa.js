@@ -11,7 +11,7 @@ let map = new mapboxgl.Map({
 });
 
 
- let element = document.createElement('div');
+let element = document.createElement('div');
 element.className = "marker";
 
 element.addEventListener("click", function () {
