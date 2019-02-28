@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", get_json_data, false);
 
 function get_json_data() {
 
-    var json_url = './2.-Jose/bestPrices.json';
+    var json_url = './assets/js/bestPrices.json';
     xmlhttp = new XMLHttpRequest();
 
     xmlhttp.onreadystatechange = function () {
@@ -32,20 +32,15 @@ function append_json(data) {
     });
 }
 
-  function goToGas(x,y){
+function goToGas(x,y){
     console.log("x: " + x + "y: "+y);
     
-    let map = new mapboxgl.Map({
-    container: 'map',
-    style: 'mapbox://styles/mapbox/streets-v11',
-    center: [x, y],
-    zoom: 12
- 
-});
-    
-     let marker = new mapboxgl.Marker(element).setLngLat({
+    let marker = new mapboxgl.Marker(element).setLngLat({
     lng: x,
     lat: y
     })
     .addTo(map);
+    
+     map.flyTo({center: [x, y], zoom: 15});
+    
 }
